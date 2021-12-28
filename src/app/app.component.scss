@@ -1,0 +1,26 @@
+.container {
+    background-color: rgb(152, 28, 28);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: rgb(152, 28, 28);
+    padding: 20px;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-right: 0 auto;
+}

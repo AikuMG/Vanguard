@@ -1,0 +1,12 @@
+<div class = "list" *ngFor="let fund of tempFundList | slice: 0:8; let i = index">
+    <hr>
+	<div id="input" (click)="makeChange(i)" *ngIf="fund[2]==false">
+		<strong>{{(fund[0].charAt(0).toUpperCase() + fund[0].slice(1)).replace('_', ' ')}}: {{fund[1]}}</strong>
+	</div>
+	<div *ngIf="fund[2]==true">
+		{{(fund[0].charAt(0).toUpperCase() + fund[0].slice(1)).replace('_', ' ')}}:
+        <input id="input" (blur)="makeStatic(i)" [(ngModel)]="fund[1]" (keyup.enter)="update()"/>
+	</div>
+</div>
+<br>
+<button (click)="update()">Update Fund</button><a href="http://localhost:4200/funds"><button>Return to Funds</button></a>

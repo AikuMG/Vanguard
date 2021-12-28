@@ -1,0 +1,103 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="input-field">
+          <label for="name"><strong>Name:</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="fund.name"
+            name="name"
+          />
+        </div>
+  
+        <div class="input-field">
+          <label for="ticker"><strong>Ticker:</strong></label>
+          <input
+            class="form-control"
+            id="ticker"
+            required
+            [(ngModel)]="fund.ticker"
+            name="ticker"
+          />
+        </div>
+
+        <div class="input-field">
+            <label for="asset-class"><strong>Asset class:</strong></label>
+            <input
+              class="form-control"
+              id="asset-class"
+              required
+              [(ngModel)]="fund.asset_class"
+              name="asset-class"
+            />
+          </div>
+
+          <div class="input-field">
+            <label for="risk-level"><strong>Risk level:</strong></label>
+            <input
+              class="form-control"
+              id="risk-level"
+              [(ngModel)]="fund.risk_level"
+              name="risk-level"
+            />
+          </div>
+
+          <div class="input-field">
+            <label for="expense-ratio"><strong>Expense ratio:</strong></label>
+            <input
+              class="form-control"
+              id="expense-ratio"
+              [(ngModel)]="fund.expense_ratio"
+              name="expense-ratio"
+            />
+          </div>
+
+          <div class="input-field">
+            <label for="investment-min"><strong>Investment min:</strong></label>
+            <input
+              class="form-control"
+              id="investment-min"
+              required
+              [(ngModel)]="fund.investment_min"
+              name="investment-min"
+            />
+          </div>
+
+          <div class="input-field">
+            <label for="price"><strong>Price:</strong></label>
+            <input
+              class="form-control"
+              id="price"
+              required
+              [(ngModel)]="fund.price"
+              name="price"
+            />
+          </div>
+
+          <div class="input-field">
+            <label for="change-price"><strong>Change price:</strong></label>
+            <input
+              class="form-control"
+              id="change-price"
+              required
+              [(ngModel)]="fund.change_price"
+              name="change-price"
+            />
+          </div>
+  
+        <button (click)="saveFund()">Submit</button>
+      </div>
+
+      <div *ngIf="submitted">
+        <h4>Fund submitted.</h4>
+        <button (click)="newFund()">Add Another Fund</button>
+      </div>
+    </div>
+  </div>
+
+
+
+<a href="http://localhost:4200/funds"><button>Return to Funds</button></a>
